@@ -1,0 +1,20 @@
+# backups
+ext:backup | ext:bak | ext:bkf | ext:bkp | ext:old
+
+# config files
+ext:cfg | ext:cnf | ext:conf | ext:inf | ext:ini | ext:ora | ext:rdp | ext:reg | ext:txt | ext:xml
+
+# db files
+ext:dbf | ext:mdb | ext:sql
+
+# directory indexing
+intitle:index.of
+
+# docs
+ext:csv | ext:doc | ext:docx | ext:odt | ext:pdf | ext:pps | ext:ppt | ext:pptx | ext:psw | ext:rtf | ext:sxw | ext:xls | ext:xlsx
+
+# logs
+ext:log
+
+# sql errors
+intext:"incorrect syntax near" | intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"

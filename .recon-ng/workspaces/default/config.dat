@@ -1,0 +1,12 @@
+{
+    "recon/hosts-hosts/virustotal": {
+        "SOURCE": "C:\\Users\\Doit\\Desktop\\domain.txt"
+    },
+    "recon/netblocks-companies/whois_orgs": {
+        "SOURCE": "baidu.com"
+    },
+    "base": {
+        "TIMEOUT": 300,
+        "VERBOSITY": 2
+    }
+}

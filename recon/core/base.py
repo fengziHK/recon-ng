@@ -63,7 +63,8 @@ class Recon(framework.Framework):
         # set path variables
         self.app_path = framework.Framework.app_path = sys.path[0]
         self.core_path = framework.Framework.core_path = os.path.join(self.app_path, 'core')
-        self.home_path = framework.Framework.home_path = os.path.join(os.path.expanduser('~'), '.recon-ng')
+        #self.home_path = framework.Framework.home_path = os.path.join(os.path.expanduser('~'), '.recon-ng')
+        self.home_path = framework.Framework.home_path = os.path.join(self.app_path, '.recon-ng')
         self.mod_path = framework.Framework.mod_path = os.path.join(self.home_path, 'modules')
         self.data_path = framework.Framework.data_path = os.path.join(self.home_path, 'data')
         self.spaces_path = framework.Framework.spaces_path = os.path.join(self.home_path, 'workspaces')
@@ -462,6 +463,7 @@ class Recon(framework.Framework):
 
     def _load_module(self, dirpath, filename):
         mod_name = filename.split('.')[0]
+        dirpath = dirpath.replace("\\", "/")
         mod_category = re.search('/modules/([^/]*)', dirpath).group(1)
         mod_dispname = '/'.join(re.split('/modules/', dirpath)[-1].split('/') + [mod_name])
         mod_loadname = mod_dispname.replace('/', '_')
